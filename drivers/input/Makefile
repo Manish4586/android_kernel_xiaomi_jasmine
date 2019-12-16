@@ -30,5 +30,8 @@ obj-$(CONFIG_INPUT_APMPOWER)	+= apm-power.o
 obj-$(CONFIG_INPUT_KEYRESET)	+= keyreset.o
 obj-$(CONFIG_INPUT_KEYCOMBO)	+= keycombo.o
 
+#obj-y				+= fingerprint/
+obj-$(CONFIG_INPUT_HALL_SENSOR)	+= hall.o
+
 obj-$(CONFIG_RMI4_CORE)		+= rmi4/
-obj-$(CONFIG_SMI130)   += sensors/smi130/
+
