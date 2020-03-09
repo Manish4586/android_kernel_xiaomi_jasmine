@@ -9,9 +9,9 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  */
-#include "display/dsi-panel-tianma-nt36672-1080p-video.dtsi"
-#include "display/dsi-panel-jdi-nt36672-1080p-video.dtsi"
-#include "display/dsi-panel-boe-td4320-1080p-video.dtsi"
+#include "dsi-panel-tianma-nt36672-1080p-video.dtsi"
+#include "dsi-panel-jdi-nt36672-1080p-video.dtsi"
+#include "dsi-panel-boe-td4320-1080p-video.dtsi"
 
 /* sdm660-mdss-panels.dtsi common diff */
 &dsi_panel_pwr_supply {
