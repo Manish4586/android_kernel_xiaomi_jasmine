@@ -512,13 +512,21 @@
 		};
 
 		cont_splash_mem: splash_region@9d400000 {
-			reg = <0x0 0x9d400000 0x0 0x23ff000>;
+			reg = <0x0 0x9d400000 0x0 0x02400000>;
 			label = "cont_splash_mem";
 		};
 
-		dfps_data_mem: dfps_data_mem@0x9f7ff000 {
-		       reg = <0 0x9f7ff000 0 0x00001000>;
+		dfps_data_mem: dfps_data_mem@0x9f800000 {
+		       reg = <0 0x9f800000 0 0x00001000>;
 		       label = "dfps_data_mem";
+		};
+
+pstore_reserve_mem: pstore_reserve_mem_region@0 {
+			linux,reserve-contiguous-region;
+			linux,reserve-region;
+			linux,remove-completely;
+			reg = <0x0 0xA0000000 0x0 0x00400000>;
+			label = "pstore_reserve_mem";
 		};
 	};
 
@@ -595,6 +603,7 @@
 		reg = <0x10ac000 0x4>,
 		      <0x1fd3000 0x4>;
 		reg-names = "pshold-base", "tcsr-boot-misc-detect";
+		qcom,force-warm-reboot;
 	};
 
 	spmi_bus: qcom,spmi@800f000 {
